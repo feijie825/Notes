@@ -13,7 +13,7 @@ tasks.json
 {
     "version": "0.1.0",
     "command": "gcc",
-    "args": ["-g","${file}","-o","${file}.exe"],    // gcc±àÒëÃüÁî²ÎÊı
+    "args": ["-g","${file}","-o","${file}.exe"],    // gccç¼–è¯‘å‘½ä»¤å‚æ•°
     "problemMatcher": {
         "owner": "c",
         "fileLocation": ["relative", "${workspaceRoot}"],
@@ -57,17 +57,17 @@ launch.json
     "configurations": [
         
         {
-            "name": "C Launch (GDB)",                 // ÅäÖÃÃû³Æ£¬½«»áÔÚÆô¶¯ÅäÖÃµÄÏÂÀ­²Ëµ¥ÖĞÏÔÊ¾
-            "type": "cppdbg",                           // ÅäÖÃÀàĞÍ£¬ÕâÀïÖ»ÄÜÎªcppdbg
-            "request": "launch",                        // ÇëÇóÅäÖÃÀàĞÍ£¬¿ÉÒÔÎªlaunch£¨Æô¶¯£©»òattach£¨¸½¼Ó£©
-            "targetArchitecture": "x86",                // Éú³ÉÄ¿±ê¼Ü¹¹£¬Ò»°ãÎªx86»òx64£¬¿ÉÒÔÎªx86, arm, arm64, mips, x64, amd64, x86_64
-            "program": "${file}.exe",                   // ½«Òª½øĞĞµ÷ÊÔµÄ³ÌĞòµÄÂ·¾¶
-            "miDebuggerPath":"d:\\MinGW\\bin\\gdb.exe", // miDebuggerµÄÂ·¾¶£¬×¢ÒâÕâÀïÒªÓëMinGwµÄÂ·¾¶¶ÔÓ¦
-            "args": [],                                 // ³ÌĞòµ÷ÊÔÊ±´«µİ¸ø³ÌĞòµÄÃüÁîĞĞ²ÎÊı£¬Ò»°ãÉèÎª¿Õ¼´¿É
-            "stopAtEntry": true,                       // ÉèÎªtrueÊ±³ÌĞò½«ÔİÍ£ÔÚ³ÌĞòÈë¿Ú´¦£¬Ò»°ãÉèÖÃÎªfalse
-            "cwd": "${workspaceRoot}",                  // µ÷ÊÔ³ÌĞòÊ±µÄ¹¤×÷Ä¿Â¼£¬Ò»°ãÎª${workspaceRoot}¼´´úÂëËùÔÚÄ¿Â¼
-            "externalConsole": true,                    // µ÷ÊÔÊ±ÊÇ·ñÏÔÊ¾¿ØÖÆÌ¨´°¿Ú£¬Ò»°ãÉèÖÃÎªtrueÏÔÊ¾¿ØÖÆÌ¨
-            "preLaunchTask": "gcc"¡¡¡¡                  // µ÷ÊÔ»á»°¿ªÊ¼Ç°Ö´ĞĞµÄÈÎÎñ£¬Ò»°ãÎª±àÒë³ÌĞò£¬c++Îªg++, cÎªgcc
+            "name": "C Launch (GDB)",                 // é…ç½®åç§°ï¼Œå°†ä¼šåœ¨å¯åŠ¨é…ç½®çš„ä¸‹æ‹‰èœå•ä¸­æ˜¾ç¤º
+            "type": "cppdbg",                           // é…ç½®ç±»å‹ï¼Œè¿™é‡Œåªèƒ½ä¸ºcppdbg
+            "request": "launch",                        // è¯·æ±‚é…ç½®ç±»å‹ï¼Œå¯ä»¥ä¸ºlaunchï¼ˆå¯åŠ¨ï¼‰æˆ–attachï¼ˆé™„åŠ ï¼‰
+            "targetArchitecture": "x86",                // ç”Ÿæˆç›®æ ‡æ¶æ„ï¼Œä¸€èˆ¬ä¸ºx86æˆ–x64ï¼Œå¯ä»¥ä¸ºx86, arm, arm64, mips, x64, amd64, x86_64
+            "program": "${file}.exe",                   // å°†è¦è¿›è¡Œè°ƒè¯•çš„ç¨‹åºçš„è·¯å¾„
+            "miDebuggerPath":"d:\\MinGW\\bin\\gdb.exe", // miDebuggerçš„è·¯å¾„ï¼Œæ³¨æ„è¿™é‡Œè¦ä¸MinGwçš„è·¯å¾„å¯¹åº”
+            "args": [],                                 // ç¨‹åºè°ƒè¯•æ—¶ä¼ é€’ç»™ç¨‹åºçš„å‘½ä»¤è¡Œå‚æ•°ï¼Œä¸€èˆ¬è®¾ä¸ºç©ºå³å¯
+            "stopAtEntry": true,                       // è®¾ä¸ºtrueæ—¶ç¨‹åºå°†æš‚åœåœ¨ç¨‹åºå…¥å£å¤„ï¼Œä¸€èˆ¬è®¾ç½®ä¸ºfalse
+            "cwd": "${workspaceRoot}",                  // è°ƒè¯•ç¨‹åºæ—¶çš„å·¥ä½œç›®å½•ï¼Œä¸€èˆ¬ä¸º${workspaceRoot}å³ä»£ç æ‰€åœ¨ç›®å½•
+            "externalConsole": true,                    // è°ƒè¯•æ—¶æ˜¯å¦æ˜¾ç¤ºæ§åˆ¶å°çª—å£ï¼Œä¸€èˆ¬è®¾ç½®ä¸ºtrueæ˜¾ç¤ºæ§åˆ¶å°
+            "preLaunchTask": "gcc"ã€€ã€€                  // è°ƒè¯•ä¼šè¯å¼€å§‹å‰æ‰§è¡Œçš„ä»»åŠ¡ï¼Œä¸€èˆ¬ä¸ºç¼–è¯‘ç¨‹åºï¼Œc++ä¸ºg++, cä¸ºgcc
         }
     ]
 }
